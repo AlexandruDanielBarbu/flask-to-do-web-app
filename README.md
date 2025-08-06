@@ -53,4 +53,4 @@ python3 app.py                  # this command runs the web app
 
 > [!CAUTION]
 > This is a development version, meaning that debug info is somewhere present when running the app.
-> To prepare it for production app.py must be change accordingly!
+> To prepare it for production `app.py` must be change accordingly!
