@@ -1,3 +1,56 @@
 body {
-  background-color: wheat;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+.content {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+.content h1 {
+  color: rgb(56, 56, 56);
+}
+.content table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+.content table th, .content table td {
+  padding: 10px;
+  border: 1px solid rgb(56, 56, 56);
+}
+.content table th th, .content table td th {
+  background-color: lightblue;
+}
+
+a {
+  display: inline-block;
+  background-color: salmon;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  color: rgb(56, 56, 56);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+input {
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: white;
+  border: solid 2px black;
+  padding: 10px;
+}
+
+#btn_add {
+  background-color: #b1eb34;
+}
+#btn_add:hover {
+  background-color: #435e07;
 }/*# sourceMappingURL=styles.css.map */
