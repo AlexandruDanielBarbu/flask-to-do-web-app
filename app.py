@@ -67,7 +67,7 @@ def edit(id:int):
             print(f"ERROR {e}")
             return f"ERROR {e}"
     else:
-        return "HOME"
+        return render_template('edit.html', task=task)
 
 if __name__ in "__main__":
     with app.app_context():
