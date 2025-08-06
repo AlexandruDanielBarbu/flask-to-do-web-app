@@ -39,6 +39,7 @@ def index():
         tasks = MyTask.query.order_by(MyTask.created).all()
         return render_template("index.html", tasks=tasks)
 
+# Delete an item
 @app.route("/delete/<int:id>")
 def delete(id:int):
     delete_task = MyTask.query.get_or_404(id)
@@ -51,6 +52,22 @@ def delete(id:int):
         print(f"ERROR {e}")
         return f"ERROR {e}"
 
+# Update an item
+@app.route("/edit/<int:id>", methods=["GET", "POST"])
+def edit(id:int):
+    task = MyTask.query.get_or_404(id)
+
+    if request.method == "POST":
+        task.content = request.form['content']
+
+        try:
+            db.session.commit()
+            return redirect("/")
+        except Exception as e:
+            print(f"ERROR {e}")
+            return f"ERROR {e}"
+    else:
+        return "HOME"
 
 if __name__ in "__main__":
     with app.app_context():
